@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   }
   s.source       = {
     :git => "https://github.com/dcm-spice/yajl.git",
-    # :tag => s.version,
+    :tag => s.version,
     :submodules => true
   }
   s.source_files  = "yajl/src/*.c", "yajl/src/*.h", "yajl/src/api/*.h"
