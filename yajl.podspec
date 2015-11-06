@@ -12,8 +12,12 @@ Pod::Spec.new do |s|
     :tag => s.version,
     :submodules => true
   }
-  s.source_files  = "yajl/src/*.c", "yajl/src/*.h", "yajl/src/api/*.h"
+  s.source_files  = "yajl/src/*.c",
+                    "yajl/src/*.h",
+                    "yajl/src/api/*.h",
+                    "yajl/build/yajl-#{s.version}/include/yajl/yajl_version.h"
   s.preserve_paths = "**/*"
+  s.prepare_command = "cd yajl && ./configure"
   s.xcconfig = {
     "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/yajl/yajl"
   }
