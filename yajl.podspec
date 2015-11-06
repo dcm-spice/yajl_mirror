@@ -8,20 +8,13 @@ Pod::Spec.new do |s|
     "Lloyd Hilaiel": "lloyd@hilaiel.com"
   }
   s.source       = {
-    :git => "https://github.com/lloyd/yajl.git",
-    :tag => "v#{s.version}",
+    :git => "https://github.com/dcm-spice/yajl.git",
+    # :tag => s.version,
     :submodules => true
   }
-  s.source_files  = [
-    "src/*.{h,c}",
-    "src/api/*.{h,c}"
-  ]
-  s.public_header_files = [
-    "src/*.h",
-    "src/api/*.h"
-  ]
+  s.source_files  = "yajl/src/*.c", "yajl/src/*.h", "yajl/src/api/*.h"
   s.preserve_paths = "**/*"
-  # s.xcconfig = {
-  #   "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/yajl/src"
-  # }
+  s.xcconfig = {
+    "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/yajl/yajl"
+  }
 end
