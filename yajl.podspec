@@ -14,11 +14,15 @@ Pod::Spec.new do |s|
   }
   s.source_files  = "yajl/src/*.c",
                     "yajl/src/*.h",
-                    "yajl/src/api/*.h",
-                    "yajl/build/yajl-#{s.version}/include/yajl/yajl_version.h"
+                    "yajl/src/api/*.h"
   s.preserve_paths = "**/*"
-  s.prepare_command = "cd yajl && ./configure"
+  s.prepare_command = <<EOS
+    cd yajl && \
+    ./configure && \
+    cp build/yajl-#{s.version}/include/yajl/yajl_version.h src
+EOS
   s.xcconfig = {
     "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/yajl/yajl"
   }
+  s.platforms = { :ios => "6.0", :osx => "10.7" }
 end
