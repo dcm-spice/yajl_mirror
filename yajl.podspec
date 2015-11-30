@@ -12,8 +12,7 @@ Pod::Spec.new do |s|
     :tag => s.version,
     :submodules => true
   }
-  s.source_files  = "yajl/src/*.c", "yajl/src/*.h"
-  s.public_header_files = "include/yajl/*.h"
-  s.preserve_paths = "Android.mk"
+  s.source_files  = "yajl/src/*.c", "yajl/src/*.h", "yajl/src/api/*.h", "include/yajl/yajl_version.h"
+  s.preserve_paths = "include/yajl/*.h", "Android.mk"
   s.platforms = { :ios => "6.0", :osx => "10.7" }
 end
