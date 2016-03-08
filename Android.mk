@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_FILENAME := libyajl
-LOCAL_MODULE := yajl_static
+LOCAL_MODULE := yajl_mirror_static
 LOCAL_CFLAGS := -Wall -std=c99 -pedantic -Wpointer-arith -Wno-format-y2k -Wmissing-declarations -Wextra -Wundef -Wwrite-strings -Wredundant-decls -Wno-unused-parameter -Wno-sign-compare -DNDEBUG -O2 -Wuninitialized
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/yajl/src \
                     $(LOCAL_PATH)/include
