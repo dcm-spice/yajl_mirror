@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     "Lloyd Hilaiel": "lloyd@hilaiel.com"
   }
   s.source       = {
-    :git => "https://github.com/dcm-spice/yajl.git",  # TODO: update
+    :git => "https://github.com/dcm-spice/yajl_mirror.git",
     :tag => s.version,
     :submodules => true
   }
